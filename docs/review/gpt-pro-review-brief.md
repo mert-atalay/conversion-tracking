@@ -2,7 +2,12 @@
 
 ## What You Are Reviewing
 
-You are reviewing the current CEFA conversion-tracking transition with special attention to the parent inquiry runtime and the redesign replacement risk.
+You are reviewing the CEFA conversion-tracking transition with special attention to:
+
+- the verified parent inquiry runtime
+- the original target architecture
+- the revised phase-1 launch architecture
+- the reasons the recommendation changed
 
 Read these files in this order:
 
@@ -10,13 +15,17 @@ Read these files in this order:
 2. `docs/current-state/parent-inquiry-runtime.md`
 3. `docs/current-state/live-parent-inquiry-inventory.md`
 4. `docs/evidence/plugin-hook-map.md`
-5. `docs/planning/final-page-map.md`
+5. `docs/planning/original-target-architecture.md`
+6. `docs/planning/revised-phase-1-architecture.md`
+7. `docs/planning/final-page-map.md`
 
 ## Final Review Stance
 
-Treat the current architecture pack as strong target-state direction.
+Treat the current-state evidence as the truth layer.
 
-Do not treat it as already-proven implementation truth.
+Treat the original target architecture as the future-state north star.
+
+Treat the revised phase-1 architecture as the current launch recommendation.
 
 ## What Is Verified
 
@@ -27,6 +36,17 @@ Do not treat it as already-proven implementation truth.
 - the current custom plugin fills hidden attribution fields at submit time
 - the current custom plugin posts the final inquiry directly to KinderTales after submission
 
+## Why The Recommendation Changed
+
+The recommendation shifted because the earlier direction was too complex for phase 1 once the live runtime and implementation constraints were reviewed more carefully.
+
+The main reasons are:
+
+- the current runtime is more coupled than a clean-slate form migration
+- full sGTM adds unnecessary launch risk before parity exists
+- GTM-only attribution capture is weak if the goal is recovery from blocked client-side tags
+- some proposed implementation mechanics were not technically sound for a phase-1 build
+
 ## Pushbacks
 
 You should push back on any plan that assumes:
@@ -36,6 +56,13 @@ You should push back on any plan that assumes:
 - the current logic lives only in Gravity Forms config
 - the current KinderTales delivery path is just a generic webhook feed
 - the custom plugin is portable as-is without its existing database state
+
+You should also push back on any phase-1 plan that assumes:
+
+- GTM alone should own attribution capture
+- PHP can read `localStorage` during Gravity Forms render
+- BigQuery should be queried at request time to enforce uniqueness
+- server-side Google Ads work is required before launch
 
 ## Questions To Answer
 
@@ -58,13 +85,17 @@ You should push back on any plan that assumes:
    - KinderTales delivery
 4. What staging tests are mandatory before production cutover?
 5. What should be treated as launch blockers versus fast-follow items?
+6. Is the revised phase-1 plan the right launch plan, or should any part of the original target architecture move back into phase 1?
+7. What should remain explicitly deferred to phase 2, especially around sGTM and broader server-side routing?
 
 ## Expected Output
 
 Return:
 
 - a corrected architecture recommendation
+- an explanation of whether the shift from the original plan to the revised phase-1 plan is justified
 - explicit pushbacks on risky assumptions
 - a cutover strategy
 - a staging validation checklist
 - a view on whether the legacy plugin should be ported, wrapped, or replaced
+- a clear separation between launch-now work and future-state work

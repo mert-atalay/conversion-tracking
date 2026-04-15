@@ -12,6 +12,9 @@ It is not just a simple form embed.
   - `/inquire-form/?location=<school_uuid>&title=<school_slug>`
 - Current form:
   - Gravity Form `4`
+- Current school-entry model:
+  - one shared backend Gravity Form reused across schools
+  - the school is locked on the front end by the URL parameters, especially `location`
 - Current page shell:
   - Elementor-wrapped
 - Current supporting plugin:
@@ -38,6 +41,7 @@ If the new build changes:
 
 - the page slug
 - the form ID
+- the query-parameter school-binding contract
 - the hidden field structure
 - the school selection model
 

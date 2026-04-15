@@ -23,6 +23,7 @@ Read these files in this exact order:
 Context you must hold while reviewing:
 
 - The live parent inquiry flow is still a legacy runtime centered on `/inquire-form/`, Gravity Form `4`, and a custom `cefa-school-journey-code-manager` plugin.
+- The current parent pattern is one shared backend Gravity Form reused across schools. Different school pages resolve into the same form runtime using URL parameters such as `location=<school_uuid>` and `title=<school_slug>`.
 - That plugin is not just UI glue. It currently handles school/program/day behavior, hidden attribution-field writeback, and direct KinderTales posting after submission.
 - We originally leaned toward a more ambitious hardening direction. After reviewing the live runtime and the implementation risk, we shifted the recommendation.
 - We are not abandoning the original direction. We are resequencing it:
@@ -36,6 +37,11 @@ The main reasons for the shift are:
 - GTM-only attribution capture is a weak base if recovery from blocked client-side tags is a goal
 - some proposed implementation details appear wrong or too optimistic for phase 1, especially around PHP render-time access to `localStorage`, BigQuery-based uniqueness checks, and server-side Google Ads scope
 - the safest first move appears to be a browser-primary plus webhook-collector model that preserves KinderTales continuity while adding auditability and recovery
+
+Important implementation nuance:
+
+- do not reason about the current parent site as if each school has its own separate Gravity Form
+- reason about it as one shared Gravity Form runtime with school-bound entry through URL parameters and plugin logic
 
 Please answer in five sections:
 

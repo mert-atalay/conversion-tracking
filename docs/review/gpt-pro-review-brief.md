@@ -31,6 +31,8 @@ Treat the revised phase-1 architecture as the current launch recommendation.
 
 - the parent inquiry flow still depends on Gravity Form `4`
 - the route still depends on `location=<school_uuid>` and `title=<school_slug>`
+- the current parent flow is one shared backend Gravity Form, not one distinct Gravity Form per school
+- school locking currently happens through the URL-driven runtime, not through separate frontend forms
 - the current page still loads a custom school-journey plugin
 - the current custom plugin handles school/program/day behavior
 - the current custom plugin fills hidden attribution fields at submit time
@@ -53,6 +55,7 @@ You should push back on any plan that assumes:
 
 - Gutenberg alone replaces the current runtime
 - a new form ID can be introduced without code changes
+- each school currently has its own separate Gravity Form implementation
 - the current logic lives only in Gravity Forms config
 - the current KinderTales delivery path is just a generic webhook feed
 - the custom plugin is portable as-is without its existing database state

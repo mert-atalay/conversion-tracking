@@ -19,6 +19,7 @@ It is designed for:
 - final redesign page-map summary
 - a GPT review brief with pushbacks and review questions
 - a final copy-paste GPT Pro prompt with direct file links
+- a source-ready CEFA tracking, UTM, naming, and school taxonomy pack under `docs/source/`
 
 ## What This Repo Does Not Include
 
@@ -30,14 +31,19 @@ It is designed for:
 
 ## Recommended Reading Order
 
-1. [`docs/review/gpt-pro-review-brief.md`](./docs/review/gpt-pro-review-brief.md)
-2. [`docs/current-state/parent-inquiry-runtime.md`](./docs/current-state/parent-inquiry-runtime.md)
-3. [`docs/current-state/live-parent-inquiry-inventory.md`](./docs/current-state/live-parent-inquiry-inventory.md)
-4. [`docs/evidence/plugin-hook-map.md`](./docs/evidence/plugin-hook-map.md)
-5. [`docs/planning/original-target-architecture.md`](./docs/planning/original-target-architecture.md)
-6. [`docs/planning/revised-phase-1-architecture.md`](./docs/planning/revised-phase-1-architecture.md)
-7. [`docs/planning/final-page-map.md`](./docs/planning/final-page-map.md)
-8. [`docs/review/gpt-pro-final-prompt.md`](./docs/review/gpt-pro-final-prompt.md)
+1. [`docs/source/README.md`](./docs/source/README.md)
+2. [`docs/source/conversion-tracking-rules-spec.md`](./docs/source/conversion-tracking-rules-spec.md)
+3. [`docs/source/naming-utm-school-standards.md`](./docs/source/naming-utm-school-standards.md)
+4. [`docs/source/school-taxonomy-may-2026.md`](./docs/source/school-taxonomy-may-2026.md)
+5. [`docs/source/may-2026-paid-media-reference.md`](./docs/source/may-2026-paid-media-reference.md)
+6. [`docs/review/gpt-pro-review-brief.md`](./docs/review/gpt-pro-review-brief.md)
+7. [`docs/current-state/parent-inquiry-runtime.md`](./docs/current-state/parent-inquiry-runtime.md)
+8. [`docs/current-state/live-parent-inquiry-inventory.md`](./docs/current-state/live-parent-inquiry-inventory.md)
+9. [`docs/evidence/plugin-hook-map.md`](./docs/evidence/plugin-hook-map.md)
+10. [`docs/planning/original-target-architecture.md`](./docs/planning/original-target-architecture.md)
+11. [`docs/planning/revised-phase-1-architecture.md`](./docs/planning/revised-phase-1-architecture.md)
+12. [`docs/planning/final-page-map.md`](./docs/planning/final-page-map.md)
+13. [`docs/review/gpt-pro-final-prompt.md`](./docs/review/gpt-pro-final-prompt.md)
 
 ## Fast Summary
 
@@ -80,6 +86,7 @@ It is a resequencing:
 Use GPT Pro to review this repository as:
 
 - a verified current-state evidence pack
+- a source-ready tracking, naming, UTM, and school taxonomy pack
 - an original target-state plan that still matters
 - a revised phase-1 plan that is intended to ship first
 
